@@ -13,6 +13,8 @@
   <name>petclinic</name>
 
   <properties>
+  
+  	<wicket.version>9.11.0</wicket.version>
 
     <!-- Generic properties -->
     <java.version>1.8</java.version>
@@ -77,6 +79,13 @@
       <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
     </dependency>
+    
+    <!-- Apache Wicket -->
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket-spring</artifactId>
+      <version>${wicket.version}</version>
+	</dependency>
 
     <!-- caching -->
     <dependency>
@@ -114,7 +123,7 @@
 
   <build>
     <plugins>
-      <plugin>
+      <!--plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
         <version>${spring-format.version}</version>
@@ -126,7 +135,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
